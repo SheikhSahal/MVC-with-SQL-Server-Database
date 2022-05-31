@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "HR";
+    Layout = "~/views/shared/show_all_pages.cshtml";
+
+}
+
+<h2>HUMAN RESOURCE</h2>
+<p>this is my HR page.</p>
+
+
+
+<h3>Inline Expersion</h3>
+
+<p>
+    Name : @ViewBag.name
+    <br />
+    Salary : @ViewBag.sal
+
+</p>
+
+
+
+<h3>For Each Loop</h3>
+
+@{ var i = 0;}
+@foreach (var v in ViewBag.student as System.Array)
+{ 
+    @(i = i + 1);
+    <span>.&nbsp; @v</span>
+    <br />
+}
+
+
+
+<h3>Data Transfer Model to View</h3>
+
+@{
+    var l = (MVC.Areas.HR.Models.room)ViewBag.data;    
+}
+<p>id : @l.ID
+Name : @l.Name
+Salary : @l.Salary</p>
+
+
+
+
+<h3>More data fetch model to view</h3>
+
+@foreach (var d in ViewBag.moredata as List<MVC.Areas.HR.Models.room>)
+{ 
+<p>I.D := @d.ID</p>
+<p>Name := @d.Name</p>
+<p>Salary := @d.Salary</p>
+}

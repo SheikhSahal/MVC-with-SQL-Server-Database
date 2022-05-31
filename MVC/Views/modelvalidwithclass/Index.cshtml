@@ -1,0 +1,35 @@
+﻿@model MVC.Models.form
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Model Validation with Class</h2>
+
+@using (Html.BeginForm())
+{ 
+<p>Name :@Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+
+</p>
+    
+    <p>Email :@Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </p>
+    
+    <p>Age :@Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age)
+    </p>
+    
+    
+    
+    <p>Date :@Html.TextBoxFor(m => m.Date)
+        @Html.ValidationMessageFor(m => m.Date)
+    </p>
+    
+    
+    <p><input type="submit" value="Save" /></p>
+    
+    
+   @Html.Raw(ViewBag.msge)
+}

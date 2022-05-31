@@ -1,0 +1,48 @@
+﻿@model List<MVC.Models.MDataEmp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Manually Show Data to the Database.</h2>
+
+@using (Html.BeginForm())
+{ 
+<p>
+ @Html.TextBox("Searchtext", null,  new { placeholder = "Search" })
+    <input type="submit" value="Search" />
+</p>
+}
+
+<p>
+    @Html.ActionLink("Add Employee","index","insertdata")
+</p>
+
+<table class ="text-center">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+
+ 
+    <tr>
+      
+        <td>@s.id</td>
+        <td>@s.Name</td>
+        <td>@s.Email</td>
+        <td>@s.Mobile</td>
+        <td>@s.address</td>
+        <td>@Html.ActionLink("Details", "index", "Details", new {id =@s.id }, null)</td>
+        <td>@Html.ActionLink("Edit", "index", "Edit", new {id = @s.id },null)</td>
+        <td>@Html.ActionLink("Delete", "index", "Delete", new {id =@s.id },null)</td>
+    </tr>
+        
+    }
+
+
+</table>

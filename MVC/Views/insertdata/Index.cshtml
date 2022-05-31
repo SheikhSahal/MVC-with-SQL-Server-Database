@@ -1,0 +1,32 @@
+﻿@model MVC.Models.MDataEmp
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Insert Data</h2>
+
+@using (Html.BeginForm())
+{ 
+<p>
+   Name : @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+</p>
+    
+    <p>
+        Email : @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </p>
+    
+    <p>
+        Mobile : @Html.TextBoxFor(m => m.Mobile)
+        @Html.ValidationMessageFor(m =>m.Mobile)
+    </p>
+    <p>
+        Address : @Html.TextBoxFor(m => m.address)
+        @Html.ValidationMessageFor(m => m.address)
+    </p>
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+}

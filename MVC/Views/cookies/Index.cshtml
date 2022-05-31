@@ -1,0 +1,30 @@
+﻿@model MVC.Models.cookies
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cookies</h2>
+
+@Html.ValidationSummary()
+
+
+
+
+@{
+    if (ViewBag.name == null)
+    {
+            using (Html.BeginForm())
+            { 
+            <p> Name  : @Html.TextBoxFor( m => m.Name)</p>
+                <p>
+                    <input type="submit" value="Log in" />
+                </p>
+            }
+    }
+    else
+    {
+    <p>Welcome to our Website Mr @ViewBag.name</p>
+    }    
+
+}

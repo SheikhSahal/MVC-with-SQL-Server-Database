@@ -1,0 +1,48 @@
+﻿body {
+   
+    
+
+}
+
+
+
+.col {
+background-color:#999999;
+}
+
+
+.col1 {
+background-color:#d9d9d9;
+}
+
+
+.bord {
+border:2px black solid;
+}
+
+.nodot {
+list-style:none;
+}
+
+
+.red {
+color:red;
+
+}
+
+table {
+border: 1px solid black;
+}
+
+tr {
+border: 1px solid black;
+}
+
+th {
+border: 1px solid black;
+
+}
+td {
+border: 1px solid black;
+
+}

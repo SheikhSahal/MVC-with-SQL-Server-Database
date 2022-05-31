@@ -1,0 +1,44 @@
+﻿<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MVC</title>
+
+        @Styles.Render("~/bundles/css")
+        @*<link href="~/Bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="~/Bootstrap/css/StyleSheet1.css" rel="stylesheet" type="text/css"/>*@
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <ul class="navbar bord nodot">
+                <li>@Html.ActionLink("HOME", "index", new {area="",Controller = "Home" })</li>
+                <li>@Html.ActionLink("ABOUT", "about", new {area="",Controller="about"})</li>
+                <li>@Html.ActionLink("CONTACT", "contact", new { area="",Controller="contact"})</li>
+                <li>@Html.ActionLink("ADMIN", "index", new { area="Admin", Controller="Home"})</li>
+                <li>@Html.ActionLink("HR", "HR", new { area="HR",Controller="HR"})</li>
+                <li>@Html.ActionLink("ACCOUNTS", "index", new { area="accouts",Controller="home"})</li>
+                <li>@Html.ActionLink("GET OR POST", "index", new { area= "GET_OR_POST",Controller="home"})</li>
+                <li>@Html.ActionLink("MODEL VALIDATION", "index", new {area = "", Controller = "modelvalid" })</li>
+                <li>@Html.ActionLink("COOKIES", "index", new { area="" , Controller = "cookies"})</li>
+                <li>@Html.ActionLink("SEND EMAIL", "index", new {area="",Controller = "sendemail" })</li>
+                <li>@Html.ActionLink("Partial View","index","PartialView")</li>
+                <li>@Html.ActionLink("Manually Database", "index", new {area="", Controller="ManualDB" })</li>
+              
+
+            </ul>
+        </div>
+        
+        
+        <div class="jumbotron text-center">
+            <h1>slider</h1>
+            
+        </div>
+            @RenderBody()
+            </div>
+
+        @Scripts.Render("~/bundles/js")
+       @* <script src="~/Bootstrap/js/jquery-3.2.1.js" type="text/javascript"></script>
+        <script src="~/Bootstrap/js/bootstrap.js" type="text/javascript"></script>*@
+    </body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model MVC.Models.MDataEmp
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Edit Record</h2>
+
+@using (Html.BeginForm())
+{ 
+<p>
+    @Html.DisplayNameFor(m => m.id)
+    @Html.TextBoxFor(m => m.id)
+</p>
+
+<p>
+    @Html.DisplayNameFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+</p>    
+
+<p>
+    @Html.DisplayNameFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+</p>    
+    <p>
+        @Html.DisplayNameFor(m => m.Mobile)
+        @Html.TextBoxFor(m => m.Mobile)
+    </p>
+    <p>
+        @Html.DisplayNameFor(m => m.address)
+        @Html.TextBoxFor(m => m.address)
+    </p>
+ 
+
+    <p>
+        <input type="submit" value="result" />
+    </p>   
+}

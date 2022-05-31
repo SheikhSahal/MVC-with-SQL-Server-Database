@@ -1,0 +1,23 @@
+﻿@model MVC.Models.sendmail
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Send Email</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm())
+{
+    <p>Send Mail : @Html.TextBoxFor(m => m.send)</p>
+<p>Name :@Html.TextBoxFor(m => m.Name)</p>
+    <p>Email :@Html.TextBoxFor(m => m.Email)</p>
+    <p>Mobile No :@Html.TextBoxFor(m => m.Mobile)</p>
+    <p>Message</p>
+    <p>:@Html.TextAreaFor(m => m.Message)</p>
+    
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+}

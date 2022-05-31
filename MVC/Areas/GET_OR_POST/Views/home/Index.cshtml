@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/show_all_pages.cshtml";
+}
+
+<h2>Get OR Post</h2>
+@Html.ValidationSummary()
+
+@using (Html.BeginForm())
+{ 
+    <p>
+        First :@Html.TextBox("first")
+        @Html.ValidationMessage("first")
+    </p>
+    <p>
+        Second :@Html.TextBox("second")
+        @Html.ValidationMessage("second")
+    </p>
+    <p>
+        Email :@Html.TextBox("Email")
+        @Html.ValidationMessage("Email")
+
+    </p>
+    
+    <p>
+        Date Of Birth :@Html.TextBox("DOB")
+        @Html.ValidationMessage("DOB")
+    </p>
+    <p>
+        <input type="submit" value="Result" />
+    </p>
+  
+    if (ViewBag.b == "M.Sahal Qasim")
+    { 
+    <p>Correct</p>
+    }
+ 
+    <p>Result : @ViewBag.b</p>
+    
+    <p> @Html.Raw(ViewBag.errormsge)</p>
+}
+
+<p>@Html.ActionLink("Go To Simple Type HTML DropDown", "DropDown", new { area = "GET_OR_POST", Controller = "home" })</p>
+<p>@Html.ActionLink("Go To Strongly Type HTML TextBox", "sdropdown", new { area = "GET_OR_POST", Controller = "home" })</p>

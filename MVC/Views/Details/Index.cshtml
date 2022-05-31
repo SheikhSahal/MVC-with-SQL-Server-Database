@@ -1,0 +1,36 @@
+﻿@model MVC.Models.MDataEmp
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Details</h2>
+
+@using (Html.BeginForm())
+{ 
+<p>
+    @Html.DisplayNameFor(m => m.id) 
+    @Html.TextBoxFor(m => m.id)
+    
+</p>
+    
+    <p>
+        @Html.DisplayNameFor(m => m.Name) 
+        @Html.DisplayTextFor(m => m.Name)
+    </p>
+    
+    <p>
+        @Html.DisplayNameFor(m => m.Email) 
+        @Html.DisplayTextFor(m => m.Email)
+    </p>
+    
+    <p>
+        @Html.DisplayNameFor(m => m.Mobile) 
+        @Html.DisplayTextFor(m => m.Mobile)
+    </p>
+    <p>
+        @Html.DisplayNameFor(m => m.address) 
+        @Html.DisplayTextFor(m => m.address)
+    </p>
+
+}

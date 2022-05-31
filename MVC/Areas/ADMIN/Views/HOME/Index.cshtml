@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/show_all_pages.cshtml";
+}
+
+<h2>ADMINISRATION</h2>
+<p>this is my admin page.</p>
+<br />
+<br />
+
+<h3>inline experession</h3>
+<h6>Date : @DateTime.Now.ToString("dd-MMM-yyyy")</h6>
+<h6>Time : @DateTime.Now.ToString("hh:mm:ss tt")</h6>
+<h6>Day  : @DateTime.Now.ToString("dddd")</h6>
+
+
+
+<h3>Variables</h3>
+@{
+    var a = "Welcome to";
+    var b = "Website";
+    var c = a +" " +b;
+   <h6>@c</h6> 
+}
+<br />
+<h3>If else Statement</h3>
+
+
+@{
+    var i=10;
+    if (i == 10)
+    {
+    <span style="color:green;">Correct</span>
+    }    
+    else
+    {
+    <span style="color:red;">Wrong</span>
+}
+}
+
+<br />
+<br />
+
+<h3>Loop</h3>
+@{
+for (int x=0; x<=30;x=x+1)
+{
+    
+    if ( x <= 10)
+{
+<span style="color:green; margin-left:10px">@x</span>
+}
+else if (x <= 20)
+ {
+ <span style="color:orange; margin-left:10px">@x</span>
+ }
+  else if (x <= 30)
+  {
+  <span style="color:blue; margin-left:10px">@x</span>
+  }
+
+} 
+          
+}
+
+

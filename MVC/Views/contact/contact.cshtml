@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "contact";
+}
+
+<h2>contact</h2>
+
+<p>this is my contact page.</p>
+
+<h3>ViewData</h3>
+<p>@ViewData["id"]</p>
+<p>@ViewData["user"]</p>
+
+
+
+<h3>ViewData tranfer </h3>
+@foreach (var i in ViewData["fetch"] as System.Array)
+{ 
+<span>@i</span>
+}
+
+
+@{var b = 0;}
+<h3>Fetch more data</h3>
+@foreach (var v in ViewData["scol"] as List<MVC.Models.Schol>)
+{ 
+<span>
+    @( b = b + 1)
+@v.id
+@v.Name
+@v.Salary
+    <br />
+</span>
+}

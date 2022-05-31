@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/show_all_pages.cshtml";
+}
+
+<h2>Accounts</h2>
+<p>This is my Accounts page.</p>
+
+<h3>ViewData</h3>
+ID :@ViewData["id"]
+Name : @ViewData["Name"]
+
+
+<h3>Fetch More Data with System Array</h3>
+@foreach (var e in ViewData["io"] as System.Array)
+{ 
+@e
+}
+
+
+<h3>Fetch data model to view</h3>
+@{
+    var t = (MVC.Areas.Accouts.Models.optp)ViewData["fat"];
+}
+<span>
+ID :@t.id
+Name :@t.Name
+Salary : @t.Salary
+    </span>
+
+
+
+
+<h3>Fetch more data model to view </h3>
+@{ var p = 0;}
+@foreach (var i in ViewData["fetch"] as List<MVC.Areas.Accouts.Models.optp>)
+{ 
+<span>
+    @( p = p + 1)
+ID : @i.id
+Name : @i.Name
+Salary : @i.Salary
+    <br />
+</span>
+}

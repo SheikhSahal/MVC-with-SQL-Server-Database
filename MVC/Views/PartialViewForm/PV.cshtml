@@ -1,0 +1,32 @@
+﻿@model MVC.Models.PVform
+
+<span class="red">
+@Html.ValidationSummary()
+    </span>
+@using (Html.BeginForm())
+{ 
+<p>
+    Name : @Html.TextBoxFor(m =>m.Name)
+    
+</p>
+    
+    <p>
+        Email : @Html.TextBoxFor(m => m.Email)
+    </p>
+
+    <p>
+        Age :@Html.TextBoxFor(m => m.Age)
+    </p>
+    
+    <p>
+        Phone :@Html.TextBoxFor(m => m.Phone)
+    </p>
+    
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+    
+    <p>
+        @ViewBag.shw
+    </p>
+}

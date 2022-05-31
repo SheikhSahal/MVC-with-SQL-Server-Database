@@ -1,0 +1,21 @@
+﻿@model MVC.Areas.GET_OR_POST.Models.Maths
+
+
+@{
+    ViewBag.Title = "sdropdown";
+    Layout = "~/Views/shared/show_all_pages.cshtml";
+}
+
+<h2>Strongly Type TextBox</h2>
+@using (Html.BeginForm())
+{ 
+    <p>
+        First no:@Html.TextBoxFor(m => m.fno)
+        
+    </p>
+    <p>Last no :@Html.TextBoxFor(m => m.lno)</p>
+    <p>
+        <input type="submit" value="Result" />
+    </p>
+    <p>Result @ViewBag.re</p>
+}

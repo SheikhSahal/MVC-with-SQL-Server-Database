@@ -1,0 +1,30 @@
+﻿@model List<MVC.Models.links>
+
+
+
+@{
+    ViewBag.Title = "index2";
+}
+
+<h2>Detail</h2>
+<ul>
+@foreach (var t in TempData["trans"] as List<MVC.Models.Schol>)
+{
+<li>
+ID : @t.id
+Name :@t.Name
+Salary :@t.Salary
+        </li> 
+
+}
+</ul>
+
+
+
+<ul>
+@foreach (var c in Model)
+{ 
+<li><a href="@c.link">@c.names</a></li>
+}
+
+</ul>

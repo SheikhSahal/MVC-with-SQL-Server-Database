@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "DropDown";
+    Layout = "~/Views/shared/show_all_pages.cshtml";
+}
+
+<h2>Simple Type HTML DropDown</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm())
+{ 
+    <p>
+        First no :@Html.TextBox("firstnumber")
+                  @Html.ValidationMessage("firstnumber")
+            </p>
+    <p>
+        Last no :@Html.TextBox("lastnumber")
+        
+    </p>
+    <p>
+        Operation :@Html.DropDownList("Operation", (IEnumerable<SelectListItem>)ViewBag.operations, "----Select----") 
+
+    </p>
+    <p>
+        <input type="submit" value="Result" />
+    </p>
+    <p>
+        Result :@ViewBag.result
+
+    </p>
+ 
+    
+        
+}
+
+   

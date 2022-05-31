@@ -1,0 +1,45 @@
+﻿@model MVC.Models.ModelValid
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Model Validation</h2>
+
+
+<span style="color:red;">
+@Html.ValidationSummary()
+    </span>
+
+
+
+@using (Html.BeginForm())
+{ 
+<p>
+   Name : @Html.TextBoxFor(m => m.Name)
+   <span style="color:red;">@Html.ValidationMessageFor(m => m.Name)</span> 
+</p>
+    
+    <p>
+       Email : @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </p>
+    
+    <p>
+       Date : @Html.TextBoxFor(m =>m.Date)
+        @Html.ValidationMessageFor(m => m.Date)
+    </p>
+    <p>
+       Age : @Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age)
+    </p>
+    <p>
+        <input type ="submit" value="Result" />
+    </p>
+    
+   @Html.Raw(ViewBag.msge)
+    
+}
+
+
+<p>@Html.ActionLink("Go to Model Validate with class", "index", new {area = "",Controller = "modelvalidwithclass" })</p>

@@ -1,0 +1,43 @@
+﻿@model List<MVC.Models.links>
+
+@{
+    ViewBag.Title = "about";
+}
+
+<h2>about</h2>
+
+<p>this is my about page.</p>
+
+<h3>Model Or Strongly Type Objects</h3>
+<ul>
+    @foreach (var i in Model)
+    { 
+    <li>
+     <a href="@i.link">@i.names</a>   
+    </li>
+    }
+</ul>
+
+
+
+
+
+
+<h3>More data fetch using Tempdata</h3>
+<ul>
+@foreach (var p in TempData["trans"] as List<MVC.Models.Schol>)
+{
+    <li>
+ID : @p.id
+Name :@p.Name
+Salary :@p.Salary
+        <br />
+        </li> 
+
+}
+</ul>
+
+<ul>
+
+    <li>@Html.ActionLink("Go To Index2", "Index2", new {area = "" , Controller="about" })</li>
+</ul>
